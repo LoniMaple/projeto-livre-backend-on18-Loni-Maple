@@ -1,0 +1,41 @@
+{
+  "name": "tiny-zaku-kun",
+  "version": "0.1.0",
+  "description": "Tiny Zaku-Kun",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoniMaple/projeto-livre-backend-on18-Loni-Maple.git"
+  },
+  "keywords": [
+    "help",
+    "loni",
+    "maple",
+    "zaku",
+    "tiny",
+    "bot",
+    "API",
+    "help",
+    "message",
+    "msg",
+    "people"
+  ],
+  "author": "Loni Kaida Maple",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LoniMaple/projeto-livre-backend-on18-Loni-Maple/issues"
+  },
+  "homepage": "https://github.com/LoniMaple/projeto-livre-backend-on18-Loni-Maple#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

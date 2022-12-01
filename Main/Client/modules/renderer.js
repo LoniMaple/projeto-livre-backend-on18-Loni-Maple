@@ -49,14 +49,6 @@ function ClearFrontBuffer()
 	console.clear();
 }
 
-for (let index = 0; index < 8; index++) {
-	setTimeout(function(){
-		FrameRender(frame, Colors[index]);
-	},0033);
-	//FrameRender(frame, Colors[index]);
-	//ClearFrontBuffer();
-	setTimeout(function() {
-		ClearFrontBuffer();
-	}, 1016)
-	
-}
+module.exports = { 
+	FrameRender, 
+	ClearFrontBuffer};
