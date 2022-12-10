@@ -1,10 +1,5 @@
 barata
-[18:36]
 voadora
-[18:37]
-javaporco
-[18:37]
-tartruga
 [18:37]
 cogumelo
 [18:37]
@@ -18,3 +13,7 @@ piranha
 agua viva
 [18:44]
 barracuda
+
+31/01/2002
+10/04/2001
+
