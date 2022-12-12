@@ -53,8 +53,9 @@ async function findMood(req, res) {
       console.log(dataBlock);
       //gsm.findAwser(dataBlock);
     
-    res.status(200).json(dataBlock);
-
+      res.status(200).json(dataBlock);
+      //res.status(200).send({message: "datablock found"});
+    
   } catch (error) {
     res.status(500).send({ message: error.message })
   }

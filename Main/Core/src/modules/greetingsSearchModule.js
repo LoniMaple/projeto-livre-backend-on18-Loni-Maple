@@ -9,11 +9,11 @@ date = day.getDate()+" / "+day.getMonth()+" / "+day.getFullYear();
 
 function findAwser (data){
     let listSize = data.lenght;
-    min = 0;
+    let min = 0;
 
-    pickRandom = Math.random() * (listSize - min) + min;
+    let pickRandom = Math.random() * (listSize - min) + min;
 
-    chosenID = data[pickRandom].id;
+    let chosenID = data[pickRandom]._id;
 
     return chosenID;
 }
