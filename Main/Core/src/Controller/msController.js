@@ -37,27 +37,40 @@ async function deleteData(req, res) {
 }
 
 async function findMood(req, res) {
-  const { greetings } = req.query;
+  const { type, data } = req.query;
 
   let query = { };
 
+  if (type) query.type = new RegExp(type, 'i');
 
+ 
+
+
+  if(type){
   try {
-
-    if(greetings == 1){
-      query.greetings = new RegExp(greetings, "i");
-
-      const dataBlock = MS_Schema.find(greetings);
+      const dataBlock = await MS_Schema.find({type: type});
       console.log("ok");
       console.log(dataBlock);
       //gsm.findAwser(dataBlock);
-    }
-    res.status(200).send({ message: greetings })
+    
+    res.status(200).json(dataBlock);
 
   } catch (error) {
     res.status(500).send({ message: error.message })
   }
-  
+}
+
+if (data) query.data = new RegExp(data, 'i');
+
+if(data){
+  try {
+    const dataBlock = await MS_Schema.find({data: data});
+    res.status(200).json(dataBlock);
+
+  } catch (error) {
+    res.status(500).send({ message: error.message })
+  }
+}
 }
 
 module.exports = {

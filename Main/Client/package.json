@@ -1,0 +1,15 @@
+{
+  "name": "tinyzakuclient",
+  "version": "0.0.1",
+  "description": "Tiny zaku kun client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server.js"
+  },
+  "author": "Loni Maple",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
