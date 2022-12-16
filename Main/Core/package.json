@@ -1,6 +1,6 @@
 {
   "name": "tiny-zaku-kun",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "description": "Tiny Zaku-Kun",
   "main": "server.js",
   "scripts": {
