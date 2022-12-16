@@ -36,7 +36,20 @@ async function createData(req, res) {
 };
 
 async function deleteData(req, res) {
+  try {
+    const object = await MS_Schema.findById(req.params.id)
 
+        await object.delete();
+
+        res.status(204).json({
+            mensagem: `Dado removido com sucesso UwU.`
+        })
+    
+  } catch (error) {
+    res.status(400).json({
+      mensagem: error.message
+  })
+  }
 }
 
 async function findMood(req, res) {
