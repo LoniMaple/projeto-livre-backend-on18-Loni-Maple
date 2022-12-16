@@ -3,6 +3,9 @@ const MS_Schema = require("../models/MS_Schema");
 //modules
 const gsm = require("../modules/greetingsSearchModule");
 
+let id;
+let filteredData;
+
 const getAll = async (req, res) => {
   MS_Schema.find(function (err, data) {
     if (err) {
@@ -50,11 +53,24 @@ async function findMood(req, res) {
   try {
       const dataBlock = await MS_Schema.find({type: type});
       console.log("ok");
-      console.log(dataBlock);
-      //gsm.findAwser(dataBlock);
-    
-      res.status(200).json(dataBlock);
-      //res.status(200).send({message: "datablock found"});
+      console.log(dataBlock.length);
+      let x = dataBlock.length;
+      console.log(`size ${x}`);
+  
+      
+      let getRandom = gsm.findAwser(x);
+
+      console.log(`random ${getRandom}`);
+
+      let a = dataBlock[getRandom]._id;
+      console.log(a);
+
+
+      id = a;
+      await idPickData();
+      
+      res.status(200).json(filteredData);
+      
     
   } catch (error) {
     res.status(500).send({ message: error.message })
@@ -72,6 +88,23 @@ if(data){
     res.status(500).send({ message: error.message })
   }
 }
+}
+
+async function idPickData(){
+  try {
+    const selectedData = await MS_Schema.findById(id);
+
+    //console.log(selectedData);
+    filteredData = selectedData;
+
+    console.log(filteredData);
+
+    return;
+    
+
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 module.exports = {
