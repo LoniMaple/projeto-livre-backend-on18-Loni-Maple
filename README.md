@@ -152,5 +152,5 @@ Contribuições são sempre bem-vindas!
 Para contribuir faça um fork do projeto e faça commits em uma brach diferente da main ou maple.
 Pull Requests serão analizados e se tudo estiver ok ele vai ser mesclado a branch de testes `(maple)`.
 
-`Por favor, não ultilize na desrespeitoso!`.
+`Por favor, não ultilize nada desrespeitoso!`.
 
