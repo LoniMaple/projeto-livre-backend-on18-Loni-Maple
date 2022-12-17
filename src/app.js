@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 const database = require("./database/mongoConfig");
-const msRoutes = require("./routes/msRoutes");
+const msRoutes = require("./Routes/msRoutes");
 
 app.use(express.json());
 

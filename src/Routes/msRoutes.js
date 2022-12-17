@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const controller = require("../controller/msController");
+const controller = require("../Controller/msController");
 
 router.get("/", controller.getAll);
 

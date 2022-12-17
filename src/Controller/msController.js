@@ -1,7 +1,7 @@
-const MS_Schema = require("../models/MS_Schema");
+const MS_Schema = require("../Models/MS_Schema");
 
 //modules
-const gsm = require("../modules/greetingsSearchModule");
+const gsm = require("../Modules/greetingsSearchModule");
 
 let id;
 let filteredData;
